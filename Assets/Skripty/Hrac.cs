@@ -11,6 +11,7 @@ public class Hrac : MonoBehaviour {
     public int zivoty;
     public int zivotyMax;
     public int zivotyExtra;
+    public int pocetCelkovichZivotu;
     public int mana;
     public int manaMax;
     public int manaExtra;
@@ -41,8 +42,9 @@ public class Hrac : MonoBehaviour {
     public GameObject spell1;
     public GameObject spell2;
     public GameObject spell3;
-    public GameObject potioinAmount;
     
+    public Text potioinAmount;
+    [SerializeField]private Text _pocetCekovichZivotuText;
     private Text _hpText;
     private Text _manaText;
     private Text _lvlText;
@@ -78,7 +80,8 @@ public class Hrac : MonoBehaviour {
         staminaMax = 10;
         stamina = 10;
         potiony = 3;
-        
+        pocetCelkovichZivotu = 3;
+            
         _xpText = texty.transform.Find("XP").gameObject.GetComponent<Text>();
         _hpText = texty.transform.Find("Zivoty").gameObject.GetComponent<Text>();
         _manaText = texty.transform.Find("Mana").gameObject.GetComponent<Text>();
@@ -110,18 +113,31 @@ public class Hrac : MonoBehaviour {
     }
 
     public void ChangeHp(int kolik) {
+        Debug.Log(zivoty+ " " +zivotyMax);
         zivoty += kolik;
         
         //if (kolik > 0) zivotyMax += kolik;
         if (zivoty <= 0) zivoty = 0;
-
-        _hpText.text = zivoty + " / " + zivotyMax;
-            
+        
         if (zivoty == 0) {
-            UIManager.MojeInstance.DeathScreen.SetActive(true);
-            Time.timeScale = 0f;
-            gameObject.transform.position = Vector3.zero;
+            pocetCelkovichZivotu -= 1;
+            _pocetCekovichZivotuText.text = pocetCelkovichZivotu.ToString();
+            if (pocetCelkovichZivotu == 0) {
+                UIManager.MojeInstance.DeathScreen.SetActive(true);
+                Time.timeScale = 0f;
+                gameObject.transform.position = Vector3.zero;
+            }
+            zivoty = zivotyMax;
+            ChangeStamina(staminaMax - stamina);
+            ChangeMana(manaMax - mana);
+            ChangePenize(- (penize/5));
         }
+
+        if (zivoty>zivotyMax) {
+            
+            zivoty = zivotyMax;
+        }
+        _hpText.text = zivoty + " / " + zivotyMax;
         _zivotyBar.SetValue(Mathf.Round((float) zivoty / zivotyMax * 1000f) / 1000f);
     }
     public void ChangeMana(int kolik) {

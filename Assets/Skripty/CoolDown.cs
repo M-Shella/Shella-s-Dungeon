@@ -72,20 +72,27 @@ public class CoolDown : MonoBehaviour {
         }
     }
     void potionCol() {
-        if (Input.GetKeyDown(KeyCode.F) && hrac.potiony >= 1) {
+        if (Input.GetKeyDown(KeyCode.F) && hrac.potiony >= 1 && hrac.zivoty < hrac.zivotyMax) {
             coolDown4 = true;
             if (potion.fillAmount == 0) potion.fillAmount = 1;
             hrac.potiony -= 1;
+            hrac.potioinAmount.text = hrac.potiony.ToString();
+            hrac.potioinAmount.color = Color.white;
+            hrac.ChangeHp(hrac.zivotyMax/4);
         }
 
         if (coolDown4) {
-            potion.fillAmount -= 0.5f * Time.deltaTime;
+            potion.fillAmount -= 0.01f * Time.deltaTime;
+            if (potion.fillAmount <=0.9)  hrac.potioinAmount.color = Color.black;
             if (potion.fillAmount <= 0) {
                 potion.fillAmount = 0;
                 hrac.potiony += 1;
+                hrac.potioinAmount.text = hrac.potiony.ToString();
+                hrac.potioinAmount.color = Color.black;
                 if (hrac.potiony == 3) coolDown4 = false;
                 else potion.fillAmount = 1;
             }
         }
+        
     }
 }
