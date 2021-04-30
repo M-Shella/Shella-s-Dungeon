@@ -17,7 +17,6 @@ public class ItemVeSveteSkript : MonoBehaviour {
         if (InventarSkript.MojeInstance._inventar.jeInvPlny()) return;
         
         InventarSkript.MojeInstance._inventar.addItem(InventarSkript.MojeInstance._inventar.getItem(id));
-        Debug.Log(id);
         Destroy(gameObject);
     }
 }

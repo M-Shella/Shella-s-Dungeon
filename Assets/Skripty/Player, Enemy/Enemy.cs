@@ -1,11 +1,15 @@
 ﻿using System;
+using Skripty.Itemy;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Enemy : MonoBehaviour {
     public int dmg;
     public int zivoty;
     public int xpDrop;
     public int rychlost;
+    public Item drop;
+    public Inventar _inventar;
     private float _pomocna;
     private float _pomocna2;
     private bool freez;
@@ -55,6 +59,7 @@ public class Enemy : MonoBehaviour {
         if (zivoty <= 0) {
             hrac.PridejXp(xpDrop);
             hrac.ChangePenize(10);
+            if (Random.Range(1,10) == 1) {drop = _inventar.getRandomItem(); ItemSpawner.MojeInstance.SpawniItem(gameObject.transform.position,drop.Id);}
             Destroy(gameObject);
         }
     }

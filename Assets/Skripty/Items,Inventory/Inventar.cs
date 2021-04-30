@@ -1,6 +1,8 @@
 ﻿using System;
 using Skripty.Itemy;
 using UnityEngine;
+using Random = UnityEngine.Random;
+
 [CreateAssetMenu(fileName = "Vytvor Inventer", menuName = "Inventar/Novy")]
 public class Inventar : ScriptableObject {
     public Slot[] inventar = new Slot[20];
@@ -29,6 +31,39 @@ public class Inventar : ScriptableObject {
 
     public Item getItem(int id) {
         return item[id];
+    }
+    
+    public Item getRandomItem() {
+        var randomCislo = Random.Range(1,100);
+        Debug.Log(randomCislo);
+        //Legendary
+        if (randomCislo <= 5) {
+            //return item[Random.Range(1,50)];
+            Debug.Log("Legend");
+            return item[Random.Range(0,3)];
+            
+        }
+        //Epic
+        if (randomCislo > 5 && randomCislo <=20) {
+           // return item[Random.Range(51,100)];
+           Debug.Log("Epic");
+           return item[Random.Range(0,3)];
+           
+        }
+        //Rare
+        if (randomCislo > 20 && randomCislo <= 50) {
+            //return item[Random.Range(101,250)];
+            Debug.Log("Rare");
+            return item[Random.Range(0,3)];
+        }
+        //Common
+        if (randomCislo > 50) {
+            //return item[Random.Range(250, 400)];
+            Debug.Log("Common");
+            return item[Random.Range(0,3)];
+        }
+
+        return null;
     }
 
     public Sprite vratSprite(int pozice) {

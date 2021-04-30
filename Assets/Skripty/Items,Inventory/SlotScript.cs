@@ -11,7 +11,6 @@ public class SlotScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         if (InventarSkript.MojeInstance._inventar.inventar[Convert.ToInt32(transform.name)].item == null) return;
         
         var pozice = Hrac.MojeInstance.gameObject.transform.position;
-        var transform1 = transform;
         pozice.y -= 2;
         
         UIManager.MojeInstance.ShowToolTip(false, Vector3.zero,null);
@@ -20,8 +19,6 @@ public class SlotScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         InventarSkript.MojeInstance._inventar.removeItem(Convert.ToInt32(transform.name));
         
         Hrac.MojeInstance.UpdatujStaty();
-        
-       
     }
 
     public void OnPointerEnter(PointerEventData eventData) {
