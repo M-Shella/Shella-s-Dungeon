@@ -9,10 +9,6 @@ public class Inventar : ScriptableObject {
     public int Length = 20;
     public Item[] item;
 
-    private void Awake() {
-        inventar = new Slot[Length];
-    }
-
     public void addItem(Item item) {
         for (var i = 0; i < inventar.Length; i++) {
             if (inventar[i] == null || inventar[i].item) continue;
@@ -35,32 +31,31 @@ public class Inventar : ScriptableObject {
     
     public Item getRandomItem() {
         var randomCislo = Random.Range(1,100);
-        Debug.Log(randomCislo);
         //Legendary
         if (randomCislo <= 5) {
             //return item[Random.Range(1,50)];
             Debug.Log("Legend");
-            return item[Random.Range(0,3)];
+            return item[Random.Range(1,4)];
             
         }
         //Epic
         if (randomCislo > 5 && randomCislo <=20) {
            // return item[Random.Range(51,100)];
            Debug.Log("Epic");
-           return item[Random.Range(0,3)];
+           return item[Random.Range(51,54)];
            
         }
         //Rare
         if (randomCislo > 20 && randomCislo <= 50) {
             //return item[Random.Range(101,250)];
             Debug.Log("Rare");
-            return item[Random.Range(0,3)];
+            return item[Random.Range(103,112)];
         }
         //Common
         if (randomCislo > 50) {
             //return item[Random.Range(250, 400)];
             Debug.Log("Common");
-            return item[Random.Range(0,3)];
+            return item[Random.Range(255,270)];
         }
 
         return null;
@@ -76,7 +71,7 @@ public class Inventar : ScriptableObject {
 
     public bool jeInvPlny() {
         foreach (var item in inventar) {
-            if (item.item == null) {
+            if (item == null || item.item == null) {
                 return false;
             }
         }

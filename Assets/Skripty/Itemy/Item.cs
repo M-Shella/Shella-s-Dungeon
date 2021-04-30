@@ -27,6 +27,7 @@ namespace Skripty.Itemy {
         public int Id => id;
 
         public string Popis => popis;
+        public string Nazev => nazev;
 
         public type Typ => typ;
         

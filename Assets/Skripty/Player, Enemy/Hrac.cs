@@ -113,7 +113,6 @@ public class Hrac : MonoBehaviour {
     }
 
     public void ChangeHp(int kolik) {
-        Debug.Log(zivoty+ " " +zivotyMax);
         zivoty += kolik;
         
         //if (kolik > 0) zivotyMax += kolik;
