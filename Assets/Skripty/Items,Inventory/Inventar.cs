@@ -49,13 +49,13 @@ public class Inventar : ScriptableObject {
         if (randomCislo > 20 && randomCislo <= 50) {
             //return item[Random.Range(101,250)];
             Debug.Log("Rare");
-            return item[Random.Range(103,112)];
+            return item[Random.Range(101,112)];
         }
         //Common
         if (randomCislo > 50) {
             //return item[Random.Range(250, 400)];
             Debug.Log("Common");
-            return item[Random.Range(255,270)];
+            return item[Random.Range(251,270)];
         }
 
         return null;
