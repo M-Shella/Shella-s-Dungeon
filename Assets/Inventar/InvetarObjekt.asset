@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: InvetarObjekt
   m_EditorClassIdentifier: 
   inventar:
-  - item: {fileID: 11400000, guid: e3d513b6902452f4aaca33088df18e80, type: 2}
-  - item: {fileID: 11400000, guid: 1ef5c3e0a506af84c820b9b13eb0be5a, type: 2}
-  - item: {fileID: 11400000, guid: 1ef5c3e0a506af84c820b9b13eb0be5a, type: 2}
-  - item: {fileID: 11400000, guid: 1ef5c3e0a506af84c820b9b13eb0be5a, type: 2}
-  - item: {fileID: 11400000, guid: e3d513b6902452f4aaca33088df18e80, type: 2}
-  - item: {fileID: 11400000, guid: 1ef5c3e0a506af84c820b9b13eb0be5a, type: 2}
-  - item: {fileID: 11400000, guid: e3d513b6902452f4aaca33088df18e80, type: 2}
-  - item: {fileID: 11400000, guid: 86fc94d39ad425447b4550d9aa57b009, type: 2}
+  - item: {fileID: 0}
+  - item: {fileID: 0}
+  - item: {fileID: 0}
+  - item: {fileID: 0}
+  - item: {fileID: 0}
+  - item: {fileID: 0}
+  - item: {fileID: 0}
+  - item: {fileID: 0}
   - item: {fileID: 0}
   - item: {fileID: 0}
   - item: {fileID: 0}
