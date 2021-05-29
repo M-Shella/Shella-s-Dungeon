@@ -25,6 +25,7 @@ public class ItemSpawner : MonoBehaviour {
 
     public void SpawniItem(Vector3 pozice,int idItemu) {
         var clon = Instantiate(item, pozice, Quaternion.identity);
+        Debug.Log(idItemu);
         clon.GetComponent<ItemVeSveteSkript>().vyberItem(idItemu);
     }
 }

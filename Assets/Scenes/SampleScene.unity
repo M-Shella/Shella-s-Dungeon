@@ -40198,8 +40198,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 862069416}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -42.485, y: 15.826, z: 0}
-  m_LocalScale: {x: 1.8309839, y: 1.8309839, z: 1.8309839}
+  m_LocalPosition: {x: -42.723, y: 16.16, z: 0}
+  m_LocalScale: {x: 1.0525266, y: 1.0642477, z: 1.0825932}
   m_Children:
   - {fileID: 848329401}
   - {fileID: 821561392}
@@ -40352,18 +40352,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.005185619, y: -0.0035814047}
+  m_Offset: {x: 0.026072815, y: -0.59796095}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.4545455, y: 1.4545455}
     newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.745921, y: 1.0029414}
+  m_Size: {x: 0.8084378, y: 0.23813725}
   m_EdgeRadius: 0
 --- !u!114 &862069425
 MonoBehaviour:
@@ -42867,7 +42867,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 11.929157
+  orthographic size: 6.9376755
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

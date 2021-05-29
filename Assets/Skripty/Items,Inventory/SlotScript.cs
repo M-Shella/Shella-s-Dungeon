@@ -14,7 +14,7 @@ public class SlotScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         pozice.y -= 2;
         
         UIManager.MojeInstance.ShowToolTip(false, Vector3.zero,null);
-
+    
         ItemSpawner.MojeInstance.SpawniItem(pozice, InventarSkript.MojeInstance._inventar.inventar[Convert.ToInt32(transform.name)].item.Id);
         InventarSkript.MojeInstance._inventar.removeItem(Convert.ToInt32(transform.name));
         

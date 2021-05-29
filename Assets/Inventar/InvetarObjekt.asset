@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: InvetarObjekt
   m_EditorClassIdentifier: 
   inventar:
-  - item: {fileID: 0}
-  - item: {fileID: 0}
-  - item: {fileID: 0}
-  - item: {fileID: 0}
-  - item: {fileID: 0}
+  - item: {fileID: 11400000, guid: 8d2dce1fd87a4e74eb0db70d2e237327, type: 2}
+  - item: {fileID: 11400000, guid: a77e27fd46a2b554f97576a82fdfd434, type: 2}
+  - item: {fileID: 11400000, guid: 8d2dce1fd87a4e74eb0db70d2e237327, type: 2}
+  - item: {fileID: 11400000, guid: baff440a7d543854aa38f0c6f4eedb25, type: 2}
+  - item: {fileID: 11400000, guid: 9c72bf4456c08a84a9db73d47fa0937f, type: 2}
   - item: {fileID: 0}
   - item: {fileID: 0}
   - item: {fileID: 0}
@@ -288,9 +288,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f07dfd6f6788820478bc8a3412cd4096, type: 2}
   - {fileID: 11400000, guid: cd3087b76814a92428686145c611bfe5, type: 2}
   - {fileID: 11400000, guid: 8d2dce1fd87a4e74eb0db70d2e237327, type: 2}
+  - {fileID: 11400000, guid: dee12a4fa19546e48b0b2bf63458370b, type: 2}
   - {fileID: 11400000, guid: 9c72bf4456c08a84a9db73d47fa0937f, type: 2}
   - {fileID: 11400000, guid: f43d45c620caa664f83b605a195d3abe, type: 2}
-  - {fileID: 11400000, guid: dee12a4fa19546e48b0b2bf63458370b, type: 2}
   - {fileID: 11400000, guid: 413ba38da22db6848bd1456f16077053, type: 2}
   - {fileID: 11400000, guid: 003b1dcf69141f94ab80571752793a3d, type: 2}
   - {fileID: 11400000, guid: c8687542521ca7a41b2aadc41721e9be, type: 2}

@@ -15,7 +15,7 @@ public class ItemVeSveteSkript : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D other) {
         if (!other.gameObject.CompareTag("Hrac")) return;
         if (InventarSkript.MojeInstance._inventar.jeInvPlny()) return;
-
+        
         InventarSkript.MojeInstance._inventar.addItem(InventarSkript.MojeInstance._inventar.getItem(id));
         Destroy(gameObject);
     }

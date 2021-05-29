@@ -31,6 +31,7 @@ public class Inventar : ScriptableObject {
     
     public Item getRandomItem() {
         var randomCislo = Random.Range(1,100);
+        Debug.Log(randomCislo);
         //Legendary
         if (randomCislo <= 5) {
             //return item[Random.Range(1,50)];
@@ -66,6 +67,7 @@ public class Inventar : ScriptableObject {
         return inventar[pozice].item != null ? inventar[pozice].item.Icona : null;
     }
     public Sprite vratSpriteZId(int id) {
+        Debug.Log(id);
         return item[id].Icona;
     }
 
