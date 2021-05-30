@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.UNetWeaver;
+//using Unity.UNetWeaver;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -81,7 +81,7 @@ public class UIManager : MonoBehaviour {
     }
     public void konecHryNoSaveKliknuto() {
         Application.Quit();
-        UnityEditor.EditorApplication.isPlaying = false;
+        //UnityEditor.EditorApplication.isPlaying = false;
     }
     public void MenuNoSaveKliknuto() {
         Pauza(pauznuto);

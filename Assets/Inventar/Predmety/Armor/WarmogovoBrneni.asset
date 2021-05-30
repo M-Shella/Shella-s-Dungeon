@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9228ad3a2a542d39ff8a87719b35dfa, type: 3}
   m_Name: WarmogovoBrneni
   m_EditorClassIdentifier: 
-  icona: {fileID: 21300000, guid: 65af48bfbd895be4b86262cb354b6f10, type: 3}
+  icona: {fileID: 21300000, guid: 38ab31c6a57fedb44a56fb71945df7af, type: 3}
   id: 51
   nazev: "Warmogovo Brn\u011Bn\xED"
   popis: +50 HP

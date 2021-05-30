@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c9228ad3a2a542d39ff8a87719b35dfa, type: 3}
-  m_Name: FireArmor
+  m_Name: IronArmor
   m_EditorClassIdentifier: 
-  icona: {fileID: 21300000, guid: 65af48bfbd895be4b86262cb354b6f10, type: 3}
-  id: 101
-  nazev: "Ohniv\xE9 brn\u011Bn\xED"
-  popis: +30 HP
+  icona: {fileID: 21300000, guid: 709fea74b6fc4f54d9096573f065bd45, type: 3}
+  id: 103
+  nazev: "\u017Delezn\xE9 brn\u011Bn\xED"
+  popis: +25 HP
   typ: 1
   rarity: 2
-  addHP: 30
+  addHP: 25

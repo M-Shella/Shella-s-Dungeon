@@ -1,6 +1,6 @@
 ﻿using System;
-using Skripty.Itemy;
-using Unity.UNetWeaver;
+//using Skripty.Itemy;
+//using Unity.UNetWeaver;
 using UnityEngine;
 using UnityEngine.EventSystems;
 

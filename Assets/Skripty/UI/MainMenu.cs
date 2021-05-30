@@ -15,7 +15,7 @@ public class MainMenu : MonoBehaviour {
     }
     public void QuitGame(){
         Application.Quit();
-        UnityEditor.EditorApplication.isPlaying = false;
+        //UnityEditor.EditorApplication.isPlaying = false;
     }
 
     IEnumerator NacistAsynchrone(int indexSceny) {

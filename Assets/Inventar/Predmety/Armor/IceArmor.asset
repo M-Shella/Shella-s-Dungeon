@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9228ad3a2a542d39ff8a87719b35dfa, type: 3}
   m_Name: IceArmor
   m_EditorClassIdentifier: 
-  icona: {fileID: 21300000, guid: 65af48bfbd895be4b86262cb354b6f10, type: 3}
+  icona: {fileID: 21300000, guid: 147fd92df35687843ac9aa9d4d475efb, type: 3}
   id: 102
-  nazev: "Ledov\xE9 brn\u011Bn\xED"
+  nazev: "N\xE1hodn\xE9 brn\u011Bn\xED"
   popis: +27 HP
   typ: 1
   rarity: 2
