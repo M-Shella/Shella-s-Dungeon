@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dd019a79c06e45d1bcd0f28441e68552, type: 3}
-  m_Name: Nova Zbran 4
+  m_Name: kosa
   m_EditorClassIdentifier: 
-  icona: {fileID: 21300000, guid: dd72c3a6d9ffccf40b99aa6de20be81d, type: 3}
-  id: 261
-  nazev: "me\u010D"
-  popis: +7 DMG
+  icona: {fileID: 21300000, guid: 48eda919cd0706548839c81d91e5b974, type: 3}
+  id: 108
+  nazev: Kosa
+  popis: +13 DMG
   typ: 0
-  rarity: 3
-  dmgChange: 7
+  rarity: 2
+  dmgChange: 13

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd019a79c06e45d1bcd0f28441e68552, type: 3}
   m_Name: InfiniteSharpness
   m_EditorClassIdentifier: 
-  icona: {fileID: 21300000, guid: dd72c3a6d9ffccf40b99aa6de20be81d, type: 3}
+  icona: {fileID: 21300000, guid: 9c8efd294e1045c43a2feaa6eda846c5, type: 3}
   id: 53
   nazev: "Nekone\u010Dn\xE1 ostrost"
   popis: +25 DMG

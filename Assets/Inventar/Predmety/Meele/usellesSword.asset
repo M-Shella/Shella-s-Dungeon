@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dd019a79c06e45d1bcd0f28441e68552, type: 3}
-  m_Name: Nova Zbran 8
+  m_Name: usellesSword
   m_EditorClassIdentifier: 
-  icona: {fileID: 21300000, guid: dd72c3a6d9ffccf40b99aa6de20be81d, type: 3}
+  icona: {fileID: 21300000, guid: 4ea0cc8cecf40274c8e3943dc5c9ced9, type: 3}
   id: 265
-  nazev: "me\u010D"
+  nazev: "Zbyte\u010Dn\xFD me\u010D"
   popis: +1 DMG
   typ: 0
   rarity: 3

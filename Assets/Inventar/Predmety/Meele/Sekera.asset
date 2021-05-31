@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dd019a79c06e45d1bcd0f28441e68552, type: 3}
-  m_Name: Nova Zbran 5
+  m_Name: Sekera
   m_EditorClassIdentifier: 
-  icona: {fileID: 21300000, guid: dd72c3a6d9ffccf40b99aa6de20be81d, type: 3}
-  id: 262
-  nazev: "me\u010D"
-  popis: +5 DMG
+  icona: {fileID: 21300000, guid: cb30e8ac8813ad148bf36438119df8f5, type: 3}
+  id: 109
+  nazev: Sekera
+  popis: +10 DMG
   typ: 0
-  rarity: 3
-  dmgChange: 5
+  rarity: 2
+  dmgChange: 10
