@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icona: {fileID: 21300000, guid: e6e29a11000bbb540a478311c65ae91c, type: 3}
   id: 4
-  nazev: Shellova hulka
+  nazev: "Shellova h\u016Flka"
   popis: +100 Many
   typ: 2
   rarity: 0

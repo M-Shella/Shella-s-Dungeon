@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f984d824128aa64caca8a7b531479c2, type: 3}
-  m_Name: NightHunter
+  m_Name: BsicWand
   m_EditorClassIdentifier: 
-  icona: {fileID: 21300000, guid: e6e29a11000bbb540a478311c65ae91c, type: 3}
-  id: 54
-  nazev: "Skl\xEDze\u010D noci"
-  popis: +50 Many
+  icona: {fileID: 21300000, guid: 9edabb7cc0bb12c4e9b6c7654fcdfec2, type: 3}
+  id: 270
+  nazev: "Klasick\xE1 h\u016Flka"
+  popis: +1 Mana
   typ: 2
-  rarity: 1
-  addMana: 50
+  rarity: 3
+  addMana: 1

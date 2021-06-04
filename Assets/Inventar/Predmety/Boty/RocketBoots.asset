@@ -9,13 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f984d824128aa64caca8a7b531479c2, type: 3}
-  m_Name: Nova Hulka 6
+  m_Script: {fileID: 11500000, guid: 2c46b569afc6a7347ba9abb2153a75a4, type: 3}
+  m_Name: RocketBoots
   m_EditorClassIdentifier: 
-  icona: {fileID: 21300000, guid: e6e29a11000bbb540a478311c65ae91c, type: 3}
-  id: 268
-  nazev: hulka
-  popis: +13 Many
-  typ: 2
-  rarity: 3
-  addMana: 13
+  icona: {fileID: 21300000, guid: 0418f6cf32961d7479d995c44379dbf1, type: 3}
+  id: 104
+  nazev: "Raketov\xFD boty"
+  popis: + 3s do staminy
+  typ: 3
+  rarity: 2
+  addStamina: 3

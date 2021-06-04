@@ -9,13 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f984d824128aa64caca8a7b531479c2, type: 3}
-  m_Name: Nova Hulka 4
+  m_Script: {fileID: 11500000, guid: 2c46b569afc6a7347ba9abb2153a75a4, type: 3}
+  m_Name: Jordan
   m_EditorClassIdentifier: 
-  icona: {fileID: 21300000, guid: e6e29a11000bbb540a478311c65ae91c, type: 3}
-  id: 266
-  nazev: hulka
-  popis: +15 Many
-  typ: 2
-  rarity: 3
-  addMana: 15
+  icona: {fileID: 21300000, guid: b9227388f910b814b94a26b6e110f8a7, type: 3}
+  id: 106
+  nazev: Jordan
+  popis: + 3s do staminy
+  typ: 3
+  rarity: 2
+  addStamina: 3

@@ -9,13 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c46b569afc6a7347ba9abb2153a75a4, type: 3}
-  m_Name: Novy Boty 7
+  m_Script: {fileID: 11500000, guid: 4f984d824128aa64caca8a7b531479c2, type: 3}
+  m_Name: StoneWand
   m_EditorClassIdentifier: 
-  icona: {fileID: 21300000, guid: c0fde7725ab92814891638777070a4f8, type: 3}
-  id: 259
-  nazev: boty
-  popis: + 1s do staminy
-  typ: 3
+  icona: {fileID: 21300000, guid: 4284c16b93a639d4a9588da777c895dc, type: 3}
+  id: 269
+  nazev: "Klasick\xE1 h\u016Flka s kamenem"
+  popis: +10 Many
+  typ: 2
   rarity: 3
-  addStamina: 1
+  addMana: 10
