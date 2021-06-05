@@ -26,11 +26,11 @@ public class UIManager : MonoBehaviour {
 
     private void Start() {
         tlacitka = pauzeMenuUI.GetComponentsInChildren<Button>();
-        manaRegen = Time.time + 6f;
+        manaRegen = Time.time + 2f;
     }
 
     private void Update() {
-        
+        //ManaRegen
         if (Time.time > manaRegen) {
             if (Hrac.MojeInstance.mana < Hrac.MojeInstance.manaMax) {
                 Hrac.MojeInstance.mana += 1;
@@ -38,11 +38,12 @@ public class UIManager : MonoBehaviour {
             }
             manaRegen = Time.time + 10f;
         }
+        //Otevřít inventář
         if (Input.GetKeyDown(KeyCode.E)) {
             if (pauznuto) return;
             InventarSkript.MojeInstance.OtveritZavrit();
         }
-
+        //Pauza
         if (Input.GetKeyDown(KeyCode.Escape)) {
             Pauza(pauznuto);
         }
