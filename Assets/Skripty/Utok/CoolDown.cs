@@ -30,7 +30,7 @@ public class CoolDown : MonoBehaviour {
     }
 
     void abilita1() {
-        if (Input.GetKeyDown(hrac.spell1Tlacitko) && !coolDown1 && hrac.mana > hrac.spell1Stats[2]) {
+        if (Input.GetKeyDown(hrac.spell1Tlacitko) && !coolDown1 && hrac.mana > hrac.spell1Stats[2] && hrac.level >= 3) {
             coolDown1 = true;
             i1.fillAmount = 1;
         }
@@ -44,7 +44,7 @@ public class CoolDown : MonoBehaviour {
         }
     }
     void abilita2() {
-        if (Input.GetKeyDown(hrac.spell2Tlacitko) && !coolDown2 && hrac.mana > hrac.spell2Stats[2]) {
+        if (Input.GetKeyDown(hrac.spell2Tlacitko) && !coolDown2 && hrac.mana > hrac.spell2Stats[2] && hrac.level >= 6) {
             coolDown2 = true;
             i2.fillAmount = 1;
         }
@@ -58,7 +58,7 @@ public class CoolDown : MonoBehaviour {
         }
     }
     void abilita3() {
-        if (Input.GetKeyDown(hrac.spell3Tlacitko) && !coolDown3 && hrac.mana > hrac.spell3Stats[2]) {
+        if (Input.GetKeyDown(hrac.spell3Tlacitko) && !coolDown3 && hrac.mana > hrac.spell3Stats[2] && hrac.level >= 11) {
             coolDown3 = true;
             i3.fillAmount = 1;
         }

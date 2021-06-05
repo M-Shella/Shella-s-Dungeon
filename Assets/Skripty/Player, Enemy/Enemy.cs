@@ -27,7 +27,7 @@ public class Enemy : MonoBehaviour {
     //SpellStats - 0_ReloadTime 1_spell1Dmg 2_spell1ManaCost
     void OnTriggerStay2D(Collider2D other) {
         if (other.gameObject.CompareTag("Louzicka") && Time.time > _pomocna) {
-            zivoty -= (int)hrac.spell2Stats[1];
+            zivoty -= hrac.dmg/2;
             _pomocna = Time.time + 0.3f;
             if(!freez)rychlost = 3;
         }
@@ -39,11 +39,11 @@ public class Enemy : MonoBehaviour {
             _pomocna = Time.time + 0.3f;
         }
         if (other.gameObject.CompareTag("Ohynek") && Time.time > _pomocna) {
-            zivoty -= (int)hrac.spell1Stats[1];
+            zivoty -= hrac.dmg*2;
             _pomocna = Time.time + 0.3f;
         }
         if (other.gameObject.CompareTag("Ledik") && Time.time > _pomocna) {
-            zivoty -= (int)hrac.spell3Stats[1];
+            zivoty -= hrac.dmg;
             _pomocna = Time.time + 0.3f;
             _pomocna2 = Time.time + 2f;
             freez = true;

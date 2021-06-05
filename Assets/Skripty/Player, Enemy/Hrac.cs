@@ -43,6 +43,10 @@ public class Hrac : MonoBehaviour {
     public GameObject spell2;
     public GameObject spell3;
     
+    public GameObject spell1Locked;
+    public GameObject spell2Locked;
+    public GameObject spell3Locked;
+    
     public Text potioinAmount;
     [SerializeField]private Text _pocetCekovichZivotuText;
     private Text _hpText;
@@ -149,9 +153,20 @@ public class Hrac : MonoBehaviour {
     public void PridejXp(int kolik) {
         xp += kolik;
         if (xp >= ((500 * Mathf.Pow(level, 2)) - (500 * level))) {
+            //levelUp
             xp = (int) (xp - ((500 * Mathf.Pow(level, 2)) - (500 * level)));
             level++;
             _lvlText.text = (level - 1).ToString();
+            dmg += 2;
+            zivoty += 10;
+            mana += 10;
+            zivotyMax += 10;
+            manaMax += 10;
+            UpdatujStaty();
+
+            if (level >= 2) spell1Locked.SetActive(false);
+            if (level >= 6) spell2Locked.SetActive(false);
+            if (level >= 11) spell3Locked.SetActive(false);
         }
         _xpBar.SetValue(xp / ((500 * Mathf.Pow(level, 2)) - (500 * level)));
         _xpText.text = (xp + " / " + ((500 * Mathf.Pow(level, 2)) - (500 * level)));

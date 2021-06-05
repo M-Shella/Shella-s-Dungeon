@@ -27,7 +27,7 @@ public class utok : MonoBehaviour {
         }else animator.SetBool(Utoceni, Time.time < _pomocna);
         
         //Spell1
-        if (Input.GetKeyDown(hrac.spell1Tlacitko) && hrac.mana >= hrac.spell1Stats[2] && Time.time > _pomocna2) {
+        if (Input.GetKeyDown(hrac.spell1Tlacitko) && hrac.mana >= hrac.spell1Stats[2] && Time.time > _pomocna2 && hrac.level >= 3) {
             hrac.ChangeMana(-(int)hrac.spell1Stats[2]);
             _poziceMysi = cam.ScreenToWorldPoint(Input.mousePosition);
             hrac.CastSpell1();
@@ -39,7 +39,7 @@ public class utok : MonoBehaviour {
         }
         
         //Spell2
-        if (Input.GetKeyDown(hrac.spell2Tlacitko) && hrac.mana >= hrac.spell2Stats[2] && Time.time > _pomocna3) {
+        if (Input.GetKeyDown(hrac.spell2Tlacitko) && hrac.mana >= hrac.spell2Stats[2] && Time.time > _pomocna3 && hrac.level >= 6) {
             hrac.ChangeMana(-(int)hrac.spell2Stats[2]);
             _poziceMysi = cam.ScreenToWorldPoint(Input.mousePosition);
             hrac.CastSpell2();
@@ -49,7 +49,7 @@ public class utok : MonoBehaviour {
         }
         
         //Spell3
-        if (Input.GetKeyDown(hrac.spell3Tlacitko) && hrac.mana >= hrac.spell3Stats[2] && Time.time > _pomocna4) {
+        if (Input.GetKeyDown(hrac.spell3Tlacitko) && hrac.mana >= hrac.spell3Stats[2] && Time.time > _pomocna4 && hrac.level >= 11) {
             hrac.ChangeMana(-(int)hrac.spell3Stats[2]);
             _poziceMysi = cam.ScreenToWorldPoint(Input.mousePosition);
             hrac.CastSpell3();
