@@ -97,9 +97,7 @@ public class Hrac : MonoBehaviour {
         _manaText.text = mana + " / " + manaMax;
         _lvlText.text = (level - 1).ToString();
         _xpText.text = (xp + " / " + ((500 * Mathf.Pow(level, 2)) - (500 * level)));
-        _penizeText.text = penize.ToString();
-        
-        //_xpBar.SetValue(0f);
+        _penizeText.text = penize.ToString();  
     }
 
     public static Hrac MojeInstance {
@@ -118,6 +116,7 @@ public class Hrac : MonoBehaviour {
         //if (kolik > 0) zivotyMax += kolik;
         if (zivoty <= 0) zivoty = 0;
         
+        //smrt
         if (zivoty == 0) {
             pocetCelkovichZivotu -= 1;
             _pocetCekovichZivotuText.text = pocetCelkovichZivotu.ToString();
@@ -133,7 +132,6 @@ public class Hrac : MonoBehaviour {
         }
 
         if (zivoty>zivotyMax) {
-            
             zivoty = zivotyMax;
         }
         _hpText.text = zivoty + " / " + zivotyMax;

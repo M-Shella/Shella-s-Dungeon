@@ -26,7 +26,12 @@ public class SlotScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         if (InventarSkript.MojeInstance._inventar.inventar[Convert.ToInt32(transform.name)].item == null) return;
         
         var transform1 = transform;
-        UIManager.MojeInstance.ShowToolTip(true,transform1.position,InventarSkript.MojeInstance._inventar.inventar[Convert.ToInt32(transform1.name)].item.Nazev + "\n" + InventarSkript.MojeInstance._inventar.inventar[Convert.ToInt32(transform1.name)].item.Popis);
+        UIManager.MojeInstance.ShowToolTip(true,transform1.position,
+            "<b>"+InventarSkript.MojeInstance._inventar.inventar[Convert.ToInt32(transform1.name)].item.Nazev+"</b>" + "\n" + 
+            InventarSkript.MojeInstance._inventar.inventar[Convert.ToInt32(transform1.name)].item.Typ + "\n" + 
+            InventarSkript.MojeInstance._inventar.inventar[Convert.ToInt32(transform1.name)].item.Popis + "\n" +
+            "<color=orange>"+InventarSkript.MojeInstance._inventar.inventar[Convert.ToInt32(transform1.name)].item.Rarity+"</color>"
+            );
     }
 
     public void OnPointerExit(PointerEventData eventData) {
