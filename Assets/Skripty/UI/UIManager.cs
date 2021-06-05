@@ -26,14 +26,14 @@ public class UIManager : MonoBehaviour {
 
     private void Start() {
         tlacitka = pauzeMenuUI.GetComponentsInChildren<Button>();
-        manaRegen = Time.time + 2f;
+        manaRegen = Time.time + 4f;
     }
 
     private void Update() {
         //ManaRegen
         if (Time.time > manaRegen) {
             if (Hrac.MojeInstance.mana < Hrac.MojeInstance.manaMax) {
-                Hrac.MojeInstance.mana += 1;
+                Hrac.MojeInstance.mana += 5;
                 Hrac.MojeInstance.ChangeMana(0);
             }
             manaRegen = Time.time + 10f;
