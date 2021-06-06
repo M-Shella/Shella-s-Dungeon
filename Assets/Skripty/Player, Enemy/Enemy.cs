@@ -1,4 +1,5 @@
 ﻿using System;
+using Pathfinding;
 using Skripty.Itemy;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -30,11 +31,13 @@ public class Enemy : MonoBehaviour {
             zivoty -= hrac.dmg/2;
             _pomocna = Time.time + 0.3f;
             if(!freez)rychlost = 3;
+            
         }
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.CompareTag("Utok") && Time.time > _pomocna) {
+            Debug.Log("fdsz");
             zivoty -= hrac.dmg;
             _pomocna = Time.time + 0.3f;
         }
