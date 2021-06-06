@@ -15,14 +15,14 @@ public class Enemy : MonoBehaviour {
     private float _pomocna2;
     private bool freez;
     public Hrac hrac;
+    public AIPath aipath;
 
     private void Start() {
-        rychlost = 7;
         dmg = 28;
         zivoty = 10;
         xpDrop = 201;
         freez = false;
-        
+        aipath = GetComponent<AIPath>();
         hrac = GameObject.FindWithTag("Hrac").GetComponent<Hrac>();
     }
     //SpellStats - 0_ReloadTime 1_spell1Dmg 2_spell1ManaCost
@@ -30,8 +30,7 @@ public class Enemy : MonoBehaviour {
         if (other.gameObject.CompareTag("Louzicka") && Time.time > _pomocna) {
             zivoty -= hrac.dmg/2;
             _pomocna = Time.time + 0.3f;
-            if(!freez)rychlost = 3;
-            
+            if(!freez) aipath.maxSpeed = 3;
         }
     }
 
@@ -50,13 +49,13 @@ public class Enemy : MonoBehaviour {
             _pomocna = Time.time + 0.3f;
             _pomocna2 = Time.time + 2f;
             freez = true;
-            rychlost = 0;
+            aipath.maxSpeed = 0;
         }
     }
 
     void Update() {
         if (freez && _pomocna2 <= Time.time) {
-            rychlost = 7;
+            aipath.maxSpeed = 7;
             freez = false;
         }
         if (zivoty <= 0) {
