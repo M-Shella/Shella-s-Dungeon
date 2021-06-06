@@ -10,9 +10,9 @@ public class zreaneni : MonoBehaviour {
         _bum = Input.GetKeyDown("k");
         if (hrac.zivoty > 0) {
             if (!_bum) return;
-            hrac.PridejXp(100);
+            hrac.PridejXp((int) ((500 * Mathf.Pow(hrac.level, 2)) - (500 * hrac.level)));
             //hrac.ChangeHp(10);
-            _inventar.addItem(_inventar.getItem(3));
+            //_inventar.addItem(_inventar.getItem(3));
             //ItemSpawner.MojeInstance.SpawniItem(new Vector3(-2,2,0),0);
             
             //_inventar.removeItem(1);
