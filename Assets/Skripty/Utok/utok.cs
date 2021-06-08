@@ -1,4 +1,5 @@
 ﻿using System;
+using Unity.UNetWeaver;
 using UnityEngine;
 
 public class utok : MonoBehaviour {
@@ -11,6 +12,7 @@ public class utok : MonoBehaviour {
     private float _pomocna3;
     private float _pomocna4;
     private static readonly int Utoceni = Animator.StringToHash("Utoceni");
+    public ParticleSystem ps;
     private Hrac hrac;
 
     private void Start() {
@@ -37,8 +39,10 @@ public class utok : MonoBehaviour {
             var smer = _poziceMysi - x;
             var uhel = Mathf.Atan2(smer.y, smer.x) * Mathf.Rad2Deg;
             hrac.spell1.transform.rotation = Quaternion.AngleAxis(uhel, Vector3.forward);
-            
+
             hrac.spell1.transform.position = Vector2.MoveTowards(hrac.transform.position, _poziceMysi, 5 * Time.deltaTime);
+
+            ps.Play();
             
             _pomocna2 = Time.time + hrac.spell1Stats[0];
         }

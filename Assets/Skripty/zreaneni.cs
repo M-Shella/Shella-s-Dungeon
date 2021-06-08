@@ -5,11 +5,14 @@ public class zreaneni : MonoBehaviour {
     private bool _bum;
     public Inventar _inventar;
     public Hrac hrac;
+    public ParticleSystem ps;
 
     private void Update() {
         _bum = Input.GetKeyDown("k");
         if (hrac.zivoty > 0) {
             if (!_bum) return;
+            ps.Play();
+            
             hrac.PridejXp((int) ((500 * Mathf.Pow(hrac.level, 2)) - (500 * hrac.level)));
             //hrac.ChangeHp(10);
             //_inventar.addItem(_inventar.getItem(3));
