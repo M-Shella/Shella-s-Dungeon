@@ -31,7 +31,15 @@ public class utok : MonoBehaviour {
             hrac.ChangeMana(-(int)hrac.spell1Stats[2]);
             _poziceMysi = cam.ScreenToWorldPoint(Input.mousePosition);
             hrac.CastSpell1();
+            
+            //rotace
+            Vector2 x = hrac.spell1.transform.position;
+            var smer = _poziceMysi - x;
+            var uhel = Mathf.Atan2(smer.y, smer.x) * Mathf.Rad2Deg;
+            hrac.spell1.transform.rotation = Quaternion.AngleAxis(uhel, Vector3.forward);
+            
             hrac.spell1.transform.position = Vector2.MoveTowards(hrac.transform.position, _poziceMysi, 5 * Time.deltaTime);
+            
             _pomocna2 = Time.time + hrac.spell1Stats[0];
         }
         if (hrac.spell1 && Vector2.Distance(hrac.spell1.transform.position, _poziceMysi) <= 0.1) {
@@ -53,6 +61,13 @@ public class utok : MonoBehaviour {
             hrac.ChangeMana(-(int)hrac.spell3Stats[2]);
             _poziceMysi = cam.ScreenToWorldPoint(Input.mousePosition);
             hrac.CastSpell3();
+            
+            //rotace
+            Vector2 x = hrac.spell3.transform.position;
+            var smer = _poziceMysi - x;
+            var uhel = Mathf.Atan2(smer.y, smer.x) * Mathf.Rad2Deg;
+            hrac.spell3.transform.rotation = Quaternion.AngleAxis(uhel, Vector3.forward);
+            
             hrac.spell3.transform.position = Vector2.MoveTowards(hrac.transform.position, _poziceMysi, 5 * Time.deltaTime);
             _pomocna4 = Time.time + hrac.spell3Stats[0];
         }

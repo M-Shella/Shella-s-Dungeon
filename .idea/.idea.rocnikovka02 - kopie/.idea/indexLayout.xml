@@ -29,6 +29,7 @@
       <Path>Logs</Path>
       <Path>MonoBleedingEdge</Path>
       <Path>Shella's Dungeon_Data</Path>
+      <Path>Temp</Path>
       <Path>obj</Path>
     </explicitExcludes>
   </component>

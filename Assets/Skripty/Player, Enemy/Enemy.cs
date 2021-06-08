@@ -35,7 +35,6 @@ public class Enemy : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.CompareTag("Utok") && Time.time > _pomocna) {
-            Debug.Log("fdsz");
             zivoty -= hrac.dmg;
             _pomocna = Time.time + 0.3f;
         }
