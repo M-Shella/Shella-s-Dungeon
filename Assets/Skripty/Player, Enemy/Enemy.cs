@@ -8,7 +8,6 @@ public class Enemy : MonoBehaviour {
     public int dmg;
     public int zivoty;
     public int xpDrop;
-    public int rychlost;
     public Item drop;
     public Inventar _inventar;
     private float _pomocna;
