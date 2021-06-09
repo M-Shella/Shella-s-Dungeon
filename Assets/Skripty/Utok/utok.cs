@@ -42,6 +42,8 @@ public class utok : MonoBehaviour {
 
             hrac.spell1.transform.position = Vector2.MoveTowards(hrac.transform.position, _poziceMysi, 5 * Time.deltaTime);
 
+            var rotace = ps.shape;
+            rotace.rotation = new Vector3(-uhel, 90, 0);
             ps.Play();
             
             _pomocna2 = Time.time + hrac.spell1Stats[0];
