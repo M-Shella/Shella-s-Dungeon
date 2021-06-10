@@ -17,9 +17,9 @@ public class Enemy : MonoBehaviour {
     public AIPath aipath;
 
     private void Start() {
-        dmg = 28;
-        zivoty = 10;
-        xpDrop = 201;
+        dmg = 28+hrac.level*4;
+        zivoty = 10 * hrac.level;
+        xpDrop = 201 * hrac.level;
         freez = false;
         aipath = GetComponent<AIPath>();
         hrac = GameObject.FindWithTag("Hrac").GetComponent<Hrac>();
