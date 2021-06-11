@@ -31,31 +31,26 @@ public class Inventar : ScriptableObject {
     
     public Item getRandomItem() {
         var randomCislo = Random.Range(1,100);
-        Debug.Log(randomCislo);
         //Legendary
         if (randomCislo <= 5) {
             //return item[Random.Range(1,50)];
-            Debug.Log("Legend");
             return item[Random.Range(1,4)];
             
         }
         //Epic
         if (randomCislo > 5 && randomCislo <=20) {
            // return item[Random.Range(51,100)];
-           Debug.Log("Epic");
            return item[Random.Range(51,54)];
            
         }
         //Rare
         if (randomCislo > 20 && randomCislo <= 50) {
             //return item[Random.Range(101,250)];
-            Debug.Log("Rare");
             return item[Random.Range(101,112)];
         }
         //Common
         if (randomCislo > 50) {
-            //return item[Random.Range(250, 400)];
-            Debug.Log("Common");
+            //return item[Random.Range(251, 400)];
             return item[Random.Range(251,270)];
         }
 
@@ -67,7 +62,6 @@ public class Inventar : ScriptableObject {
         return inventar[pozice].item != null ? inventar[pozice].item.Icona : null;
     }
     public Sprite vratSpriteZId(int id) {
-        Debug.Log(id);
         return item[id].Icona;
     }
 
@@ -77,7 +71,6 @@ public class Inventar : ScriptableObject {
                 return false;
             }
         }
-
         return true;
     }
 }

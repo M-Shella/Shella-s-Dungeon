@@ -17,12 +17,13 @@ public class Enemy : MonoBehaviour {
     public AIPath aipath;
 
     private void Start() {
-        dmg = 28+hrac.level*4;
-        zivoty = 10 * hrac.level;
-        xpDrop = 201 * hrac.level;
+        hrac = GameObject.FindWithTag("Hrac").GetComponent<Hrac>();
+        dmg = 28+(hrac.level+1)*4;
+        zivoty = 10 * (hrac.level+1);
+        xpDrop = 201 * (hrac.level+1);
         freez = false;
         aipath = GetComponent<AIPath>();
-        hrac = GameObject.FindWithTag("Hrac").GetComponent<Hrac>();
+        
     }
     //SpellStats - 0_ReloadTime 1_spell1Dmg 2_spell1ManaCost
     void OnTriggerStay2D(Collider2D other) {
