@@ -53,7 +53,6 @@ public class Inventar : ScriptableObject {
             //return item[Random.Range(251, 400)];
             return item[Random.Range(251,270)];
         }
-
         return null;
     }
 

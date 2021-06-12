@@ -3,7 +3,6 @@
 public class Chest : MonoBehaviour {
     public Inventar _inventar;
     [SerializeField]private Sprite otevrenaTruhla;
-
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.CompareTag("Hrac")) {
             gameObject.GetComponent<SpriteRenderer>().sprite = otevrenaTruhla;

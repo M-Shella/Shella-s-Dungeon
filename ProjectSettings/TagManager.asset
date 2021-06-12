@@ -11,6 +11,7 @@ TagManager:
   - Ohynek
   - Louzicka
   - Ledik
+  - hitbox
   layers:
   - Default
   - TransparentFX
