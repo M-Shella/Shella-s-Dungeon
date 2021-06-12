@@ -60,7 +60,7 @@ public class Enemy : MonoBehaviour {
         if (zivoty <= 0) {
             hrac.PridejXp(xpDrop);
             hrac.ChangePenize(10);
-            if (Random.Range(1,10) == 1) {drop = _inventar.getRandomItem(); ItemSpawner.MojeInstance.SpawniItem(gameObject.transform.position,drop.Id);}
+            if (Random.Range(1,25) == 1) {drop = _inventar.getRandomItem(); ItemSpawner.MojeInstance.SpawniItem(gameObject.transform.position,drop.Id);}
             Destroy(gameObject);
         }
     }

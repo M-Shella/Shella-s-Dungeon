@@ -6,6 +6,7 @@ public class Pronasledovani : MonoBehaviour {
     public Hrac hrac;
     public Enemy enemy;
     private float _pomocna;
+    public ParticleSystem hit;
     private void Start() {
         PoziceHrace = GameObject.FindGameObjectWithTag("Hrac").GetComponent<Transform>();
     }   
@@ -15,6 +16,7 @@ public class Pronasledovani : MonoBehaviour {
        // }
         if (Vector2.Distance(transform.position , PoziceHrace.position) < 1.5){
             if (hrac.zivoty > 0 && Time.time > _pomocna) {
+                hit.Play();
                 hrac.ChangeHp(-enemy.dmg);
                 _pomocna = Time.time + 0.5f;
                 

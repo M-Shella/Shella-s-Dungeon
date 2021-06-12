@@ -47,7 +47,7 @@ public class utok : MonoBehaviour {
             
             _pomocna2 = Time.time + hrac.spell1Stats[0];
         }   
-        if (hrac.spell1 && Vector2.Distance(hrac.spell1.transform.position, _poziceMysi) <= 0) {
+        if (hrac.spell1 && Vector2.Distance(hrac.spell1.transform.position, _poziceMysi) <= 0.02) {
             Destroy(hrac.spell1);
         }
         

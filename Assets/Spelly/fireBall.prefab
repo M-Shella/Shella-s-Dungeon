@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71873d130f44309498ae5c6da247179b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rychlost: 5
+  rychlost: 13
   _camera: {fileID: 0}
 --- !u!61 &7668686314451694114
 BoxCollider2D:

@@ -8,6 +8,7 @@ public class UtokNaDalku : MonoBehaviour {
     private float _pomocna;
     public AIPath aipath;
     public GameObject strela;
+    public ParticleSystem ps;
     private void Start() {
         PoziceHrace = GameObject.FindGameObjectWithTag("Hrac").GetComponent<Transform>();
     }   
@@ -16,7 +17,8 @@ public class UtokNaDalku : MonoBehaviour {
             if (Time.time > _pomocna) {
                 var spawn = Instantiate(strela, transform.position, Quaternion.identity);
                 spawn.GetComponent<Strela>().enemy = enemy;
-                _pomocna = Time.time + 5f;
+                spawn.GetComponent<Strela>().hit = ps;
+                _pomocna = Time.time + 3f;
             }
         }
     }

@@ -9,6 +9,8 @@ public class Strela : MonoBehaviour {
     private Transform hrac;
     public Enemy enemy;
     private Vector2 cil;
+    public ParticleSystem hit;
+    
     void Start() {
         hrac = Hrac.MojeInstance.transform;
         cil = new Vector2(hrac.position.x, hrac.position.y);
@@ -27,6 +29,7 @@ public class Strela : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.CompareTag("hitbox")) {
+            hit.Play();
             Hrac.MojeInstance.ChangeHp(-enemy.dmg);
             Destroy(gameObject);
         }
