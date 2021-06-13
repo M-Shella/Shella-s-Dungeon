@@ -128,6 +128,9 @@ public class Hrac : MonoBehaviour {
                 UIManager.MojeInstance.DeathScreen.SetActive(true);
                 Time.timeScale = 0f;
                 gameObject.transform.position = Vector3.zero;
+                for (var i = 0; i < InventarSkript.MojeInstance._inventar.Length; i++) {
+                    InventarSkript.MojeInstance._inventar.inventar[i] = new Slot(null);
+                }
             }
             zivoty = zivotyMax;
             ChangeStamina(staminaMax - stamina);
