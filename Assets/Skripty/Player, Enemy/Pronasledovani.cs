@@ -11,7 +11,7 @@ public class Pronasledovani : MonoBehaviour {
         PoziceHrace = GameObject.FindGameObjectWithTag("Hrac").GetComponent<Transform>();
     }   
     private void FixedUpdate() {
-       // if (Vector2.Distance(transform.position , PoziceHrace.position) > 1) {
+        // if (Vector2.Distance(transform.position , PoziceHrace.position) > 1) {
        //     transform.position = Vector2.MoveTowards(transform.position, PoziceHrace.position, enemy.rychlost * Time.deltaTime);
        // }
         if (Vector2.Distance(transform.position , PoziceHrace.position) < 1.5){

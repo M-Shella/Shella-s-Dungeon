@@ -1,4 +1,5 @@
 ﻿
+using System;
 using Skripty.Itemy;
 using UnityEngine;
 using UnityEngine.UI;
@@ -54,6 +55,8 @@ public class Hrac : MonoBehaviour {
     private Text _lvlText;
     private Text _penizeText;
     private Text _xpText;
+    
+    public Text _winText;
 
     private void Start() {
         //SpellStats - 0_ReloadTime 1_spell1Dmg 2_spell1ManaCost
@@ -146,6 +149,7 @@ public class Hrac : MonoBehaviour {
     }
     public void ChangeMana(int kolik) {
         mana += kolik;
+        if (mana > manaMax)mana = manaExtra;
         _manaText.text = mana + " / " + manaMax;
         _manaBar.SetValue(Mathf.Round((float) mana / manaMax * 1000f) / 1000f);
     }
@@ -233,5 +237,19 @@ public class Hrac : MonoBehaviour {
         ChangeHp(0);
         ChangeMana(0);
         ChangeStamina(0);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other) {
+        if (other.gameObject.CompareTag("finish")) {
+            TimeSpan timeSpan = TimeSpan.FromSeconds(Time.time);
+            string timeText = string.Format("{0:D2}:{1:D2}:{2:D2}", timeSpan.Hours, timeSpan.Minutes, timeSpan.Seconds);
+            UIManager.MojeInstance.FinishScreen.SetActive(true);
+            _winText.text = "Tvůj čas je: " + timeText;
+            Time.timeScale = 0f;
+            gameObject.transform.position = Vector3.zero;
+            for (var i = 0; i < InventarSkript.MojeInstance._inventar.Length; i++) {
+                InventarSkript.MojeInstance._inventar.inventar[i] = new Slot(null);
+            }
+        }
     }
 }

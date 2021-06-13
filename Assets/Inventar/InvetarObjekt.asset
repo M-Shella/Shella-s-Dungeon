@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: InvetarObjekt
   m_EditorClassIdentifier: 
   inventar:
-  - item: {fileID: 11400000, guid: 2269b0a547421da4a85e23d387af7c85, type: 2}
+  - item: {fileID: 0}
   - item: {fileID: 0}
   - item: {fileID: 0}
   - item: {fileID: 0}

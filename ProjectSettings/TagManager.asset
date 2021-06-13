@@ -12,6 +12,7 @@ TagManager:
   - Louzicka
   - Ledik
   - hitbox
+  - finish
   layers:
   - Default
   - TransparentFX

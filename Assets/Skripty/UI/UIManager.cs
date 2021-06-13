@@ -12,6 +12,7 @@ public class UIManager : MonoBehaviour {
     public static bool pauznuto;
     private Button[] tlacitka;
     public GameObject DeathScreen;
+    public GameObject FinishScreen;
     public GameObject pauzeMenuUI;
     public GameObject menuUloz;
     public GameObject konecUloz;
